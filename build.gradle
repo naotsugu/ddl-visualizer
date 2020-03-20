@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'antlr'
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    antlr "org.antlr:antlr4:4.8-1"
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClassName = 'com.mammb.diagram.App'
+}
+
+javafx {
+    version = '11.0.2'
+    modules = [ 'javafx.web' ]
+}
+
+generateGrammarSource {
+    arguments += ['-package', 'com.mammb.diagram.parser.sql']
+}
+
+
+

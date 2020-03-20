@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css" media="screen">
+#editor { position: absolute; top: 0; right: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="editor"></div>
+<script src="./ace.min-1.4.8.js"></script>
+<script src="./theme-monokai.min-1.4.8.js"></script>
+<script src="./mode-sql.min-1.4.8.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eruda/2.2.0/eruda.js"></script>-->
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/sql");
+</script>
+</body>
+</html>
