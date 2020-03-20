@@ -12,7 +12,7 @@ Simple ddl script visualizer.
 
 ```
 $ git clone https://github.com/naotsugu/ddl-visualizer.git
-$ cd ddlview
+$ cd ddl-visualizer
 $ ./gradlew run
 ```
 
